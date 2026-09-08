@@ -1,0 +1,3898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>St. Mary's Modern High School - Njeru</title>
+
+<style>
+
+/* =====================================================
+   GENERAL SETTINGS
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fa;
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar{
+    background:#031a31;
+    color:white;
+    padding:8px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+
+.top-bar span{
+    margin-right:20px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    background:#062b52;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,0.25);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:58px;
+    height:58px;
+    background:white;
+    color:#062b52;
+    border:3px solid #d4af37;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.logo-text h1{
+    font-size:19px;
+}
+
+.logo-text p{
+    color:#d4af37;
+    font-size:12px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    align-items:center;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    color:white;
+    display:block;
+    padding:12px 13px;
+    font-size:14px;
+}
+
+nav ul li a:hover{
+    background:#d4af37;
+    color:#062b52;
+}
+
+
+/* DROPDOWN */
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:210px;
+    background:#062b52;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.dropdown-menu li{
+    width:100%;
+}
+
+.dropdown-menu li a{
+    padding:12px 15px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-btn{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero{
+
+    min-height:680px;
+
+    background-image:
+    linear-gradient(
+        rgba(0,30,60,0.68),
+        rgba(0,30,60,0.78)
+    ),
+    url("b.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    animation:heroZoom 12s infinite alternate;
+}
+
+@keyframes heroZoom{
+
+    from{
+        background-size:100%;
+    }
+
+    to{
+        background-size:110%;
+    }
+
+}
+
+.hero-content{
+
+    max-width:950px;
+
+    padding:30px;
+
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero h2{
+
+    font-size:55px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+.hero h3{
+
+    color:#d4af37;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:19px;
+
+    margin-bottom:30px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:13px 25px;
+
+    margin:5px;
+
+    border-radius:5px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+.btn-primary{
+
+    background:#d4af37;
+
+    color:#062b52;
+
+}
+
+.btn-secondary{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+section{
+
+    padding:70px 7%;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.section-title h2{
+
+    color:#062b52;
+
+    font-size:34px;
+
+}
+
+.section-title p{
+
+    color:#666;
+
+}
+
+.gold-line{
+
+    width:70px;
+
+    height:4px;
+
+    background:#d4af37;
+
+    margin:12px auto;
+
+}
+
+
+/* =====================================================
+   WELCOME SECTION
+===================================================== */
+
+.welcome{
+
+    background:white;
+
+}
+
+.welcome-container{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.welcome-image{
+
+    height:400px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+.welcome-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+
+}
+
+.welcome-image img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.welcome-text h3{
+
+    color:#062b52;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.welcome-text p{
+
+    color:#555;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =====================================================
+   WHY CHOOSE US
+===================================================== */
+
+.why-us{
+
+    background:#eef3f8;
+
+}
+
+.cards{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    border-radius:8px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card-icon{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    color:#062b52;
+
+    margin-bottom:10px;
+
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.statistics{
+
+    background:#062b52;
+
+    color:white;
+
+    padding:55px 7%;
+
+}
+
+.stat-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    text-align:center;
+
+}
+
+.stat h2{
+
+    color:#d4af37;
+
+    font-size:43px;
+
+}
+
+.stat p{
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   ACADEMICS
+===================================================== */
+
+.academics{
+
+    background:white;
+
+}
+
+.academic-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.academic-box{
+
+    background:#f5f7fa;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+.academic-image{
+
+    height:210px;
+
+    overflow:hidden;
+
+}
+
+.academic-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+
+}
+
+.academic-box:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.academic-content{
+
+    padding:22px;
+
+}
+
+.academic-content h3{
+
+    color:#062b52;
+
+    margin-bottom:10px;
+
+}
+
+
+/* =====================================================
+   STUDENT LIFE
+===================================================== */
+
+.activities{
+
+    background:#eef3f8;
+
+}
+
+.activity-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.activity{
+
+    height:280px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+}
+
+.activity img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+
+}
+
+.activity:hover img{
+
+    transform:scale(1.1);
+
+}
+
+.activity-text{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    padding:18px;
+
+    text-align:center;
+
+    background:rgba(0,0,0,0.72);
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+/* =====================================================
+   SCHOOL FACILITIES
+===================================================== */
+
+.facilities{
+
+    background:white;
+
+}
+
+.facility-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.facility{
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    background:#f4f6f8;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+.facility img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.facility-content{
+
+    padding:20px;
+
+}
+
+.facility-content h3{
+
+    color:#062b52;
+
+}
+
+
+/* =====================================================
+   NEWS
+===================================================== */
+
+.news{
+
+    background:#eef3f8;
+
+}
+
+.news-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.news-card{
+
+    background:white;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+.news-card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+.news-content{
+
+    padding:20px;
+
+}
+
+.news-content h3{
+
+    color:#062b52;
+
+    margin:8px 0;
+
+}
+
+.date{
+
+    color:#d4af37;
+
+    font-weight:bold;
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery{
+
+    background:white;
+
+}
+
+.gallery-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+.gallery-item{
+
+    height:260px;
+
+    overflow:hidden;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:2000;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.9);
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    border:4px solid white;
+
+}
+
+.close-lightbox{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   TESTIMONIALS
+===================================================== */
+
+.testimonials{
+
+    background:#062b52;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.testimonials h2{
+
+    color:white;
+
+}
+
+.testimonial{
+
+    display:none;
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:20px;
+
+}
+
+.testimonial.active{
+
+    display:block;
+
+    animation:fadeUp 1s;
+
+}
+
+.testimonial p{
+
+    font-style:italic;
+
+    margin-bottom:15px;
+
+}
+
+.testimonial h4{
+
+    color:#d4af37;
+
+}
+
+
+/* =====================================================
+   ADMISSIONS
+===================================================== */
+
+.admission{
+
+    background:
+
+    linear-gradient(
+        rgba(6,43,82,0.88),
+        rgba(6,43,82,0.88)
+    ),
+
+    url("c.jpeg") center/cover;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.admission h2{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+.admission p{
+
+    max-width:800px;
+
+    margin:0 auto 25px;
+
+}
+
+
+/* =====================================================
+   APPLICATION FORM
+===================================================== */
+
+.application{
+
+    background:#eef3f8;
+
+}
+
+.application-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+.application-container h3{
+
+    color:#062b52;
+
+    margin-bottom:20px;
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group.full{
+
+    grid-column:1/-1;
+
+}
+
+.form-group label{
+
+    margin-bottom:6px;
+
+    font-weight:bold;
+
+    color:#062b52;
+
+}
+
+.form-group input,
+
+.form-group select,
+
+.form-group textarea{
+
+    padding:13px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    font-size:15px;
+
+}
+
+.form-group textarea{
+
+    height:130px;
+
+    resize:vertical;
+
+}
+
+.submit-btn{
+
+    background:#062b52;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+}
+
+.submit-btn:hover{
+
+    background:#d4af37;
+
+    color:#062b52;
+
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq{
+
+    background:white;
+
+}
+
+.faq-container{
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.faq-item{
+
+    margin-bottom:10px;
+
+}
+
+.faq-question{
+
+    background:#062b52;
+
+    color:white;
+
+    padding:17px;
+
+    cursor:pointer;
+
+    border-radius:5px;
+
+    font-weight:bold;
+
+}
+
+.faq-answer{
+
+    display:none;
+
+    background:#f1f4f7;
+
+    padding:17px;
+
+}
+
+.faq-answer.show{
+
+    display:block;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact{
+
+    background:#eef3f8;
+
+}
+
+.contact-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+}
+
+.contact-info{
+
+    background:#062b52;
+
+    color:white;
+
+    padding:35px;
+
+    border-radius:8px;
+
+}
+
+.contact-info h3{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+.contact-info p{
+
+    margin:15px 0;
+
+}
+
+.contact-form{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:8px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+}
+
+.contact-form textarea{
+
+    height:130px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#031a31;
+
+    color:white;
+
+    padding:50px 7% 20px;
+
+}
+
+.footer-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+    gap:30px;
+
+}
+
+footer h3{
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+footer ul{
+
+    list-style:none;
+
+}
+
+footer li{
+
+    margin:8px 0;
+
+}
+
+footer a{
+
+    color:#ddd;
+
+}
+
+footer a:hover{
+
+    color:#d4af37;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,0.2);
+
+    margin-top:35px;
+
+    padding-top:20px;
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:27px;
+
+    z-index:1500;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+
+}
+
+
+/* =====================================================
+   MOBILE DESIGN
+===================================================== */
+
+@media(max-width:950px){
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    nav ul{
+
+        display:none;
+
+        position:absolute;
+
+        top:82px;
+
+        left:0;
+
+        width:100%;
+
+        background:#062b52;
+
+        flex-direction:column;
+
+        padding:10px;
+
+    }
+
+    nav ul.show{
+
+        display:flex;
+
+    }
+
+    nav ul li{
+
+        width:100%;
+
+    }
+
+    nav ul li a{
+
+        text-align:left;
+
+    }
+
+    .dropdown-menu{
+
+        position:static;
+
+        width:100%;
+
+    }
+
+    .dropdown:hover .dropdown-menu{
+
+        display:none;
+
+    }
+
+    .dropdown.open .dropdown-menu{
+
+        display:block;
+
+    }
+
+    .hero h2{
+
+        font-size:40px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .academic-grid,
+
+    .activity-grid,
+
+    .facility-grid,
+
+    .news-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .stat-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:30px;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .top-bar{
+
+        display:none;
+
+    }
+
+    .logo-text h1{
+
+        font-size:14px;
+
+    }
+
+    .hero{
+
+        min-height:570px;
+
+    }
+
+    .hero h2{
+
+        font-size:30px;
+
+    }
+
+    .hero h3{
+
+        font-size:20px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .welcome-container,
+
+    .cards,
+
+    .academic-grid,
+
+    .activity-grid,
+
+    .facility-grid,
+
+    .news-grid,
+
+    .gallery-grid,
+
+    .contact-grid,
+
+    .footer-grid,
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .form-group.full{
+
+        grid-column:auto;
+
+    }
+
+    .stat-container{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+img{max-width:100%;height:auto;display:block;}
+.hero{background-size:cover;background-position:center center;background-repeat:no-repeat;}
+.welcome-image img{width:100%;height:100%;object-fit:cover;object-position:center;}
+.academic-image img{width:100%;height:100%;object-fit:cover;object-position:center;}
+.activity img{width:100%;height:100%;object-fit:cover;object-position:center;}
+.facility img{width:100%;height:230px;object-fit:cover;object-position:center;}
+.news-card img{width:100%;height:200px;object-fit:cover;object-position:center;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center;}
+@media(max-width:768px){
+  .welcome-image{height:300px;}
+  .academic-image{height:190px;}
+  .activity{height:230px;}
+  .facility img{height:200px;}
+  .news-card img{height:190px;}
+  .gallery-item{height:210px;}
+}
+
+
+/* PROFESSIONAL IMAGE SIZING */
+img{max-width:100%;height:auto;display:block;}
+.hero{background-size:cover;background-position:center center;background-repeat:no-repeat;}
+.welcome-image img{width:100%;height:400px;object-fit:cover;object-position:center;}
+.academic-image img{width:100%;height:210px;object-fit:cover;object-position:center;}
+.activity img{width:100%;height:280px;object-fit:cover;object-position:center;}
+.facility img{width:100%;height:230px;object-fit:cover;object-position:center;}
+.news-card img{width:100%;height:200px;object-fit:cover;object-position:center;}
+.gallery-item img{width:100%;height:260px;object-fit:cover;object-position:center;}
+@media(max-width:768px){
+ .welcome-image img{height:280px;}
+ .academic-image img{height:200px;}
+ .activity img{height:240px;}
+ .facility img,.news-card img{height:200px;}
+ .gallery-item img{height:220px;}
+}
+.vision-mission{background:#fff;}
+.vision-cards{grid-template-columns:repeat(3,1fr);}
+.core-values-card{text-align:left;}
+.core-values-card .card-icon,.core-values-card h3{text-align:center;}
+.core-values-card ul{margin:10px 0 0 20px;color:#555;}
+.core-values-card li{margin:7px 0;}
+@media(max-width:900px){.vision-cards{grid-template-columns:1fr;}}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+<div>
+
+<span>📞 0776659756 / 0763350407/0772346197/ 0701133585</span>
+
+<span>✉ stmarysmodernhighschoolnjeru8@gmail.com</span>
+
+</div>
+
+<div>
+
+<span>📍 Njeru, Uganda</span>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo-area">
+    <div class="logo">SM</div>
+
+<div class="logo-text">
+
+<h1>St. Mary's Modern High School</h1>
+
+<p>Njeru, Uganda</p>
+
+</div>
+
+</div>
+
+
+<div class="menu-btn" onclick="toggleMenu()">
+
+☰
+
+</div>
+
+
+<nav>
+
+<ul id="navMenu">
+
+
+<li>
+
+<a href="#home">
+
+Home
+
+</a>
+
+</li>
+
+
+<li class="dropdown">
+
+<a href="#about" onclick="openDropdown(event,this)">
+
+About Us ▾
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+
+<a href="#about">
+
+Our School
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#leadership">
+
+School Leadership
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#facilities">
+
+Facilities
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#vision-mission">
+
+Vision & Core Values
+
+</a>
+
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="dropdown">
+
+<a href="#academics" onclick="openDropdown(event,this)">
+
+Academics ▾
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+
+<a href="#academics">
+
+Academic Departments
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#ict">
+
+ICT & Computer Studies
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#academics">
+
+Science & Mathematics
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#academics">
+
+Languages & Humanities
+
+</a>
+
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="dropdown">
+
+<a href="#admissions" onclick="openDropdown(event,this)">
+
+Admissions ▾
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+
+<a href="#admissions">
+
+Admission Information
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#application">
+
+Online Application
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#faq">
+
+Frequently Asked Questions
+
+</a>
+
+</li>
+
+</ul>
+
+</li>
+
+
+<li class="dropdown">
+
+<a href="#studentlife" onclick="openDropdown(event,this)">
+
+Student Life ▾
+
+</a>
+
+<ul class="dropdown-menu">
+
+<li>
+
+<a href="#studentlife">
+
+Sports
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#studentlife">
+
+Clubs
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#studentlife">
+
+Environment
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#studentlife">
+
+Leadership
+
+</a>
+
+</li>
+
+</ul>
+
+</li>
+
+
+<li>
+
+<a href="#news">
+
+News
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#gallery">
+
+Gallery
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#contact">
+
+Contact
+
+</a>
+
+</li>
+
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h2>
+
+St. Mary's Modern High School
+
+</h2>
+
+<h3>
+
+Excellence • Discipline • Character
+
+</h3>
+
+<p>
+
+Welcome to St. Mary's Modern High School, Njeru.
+A community dedicated to academic excellence,
+discipline, character development and the holistic
+growth of every learner.
+
+</p>
+
+
+<a href="#about" class="btn btn-primary">
+
+Discover Our School
+
+</a>
+
+
+<a href="#application" class="btn btn-secondary">
+
+Apply Now
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     WELCOME
+===================================================== -->
+
+<section class="welcome" id="about">
+
+<div class="section-title">
+
+<h2>
+
+Welcome to St. Mary's Modern High School
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Growing minds. Building character. Inspiring the future.
+
+</p>
+
+</div>
+
+
+<div class="welcome-container">
+
+
+<div class="welcome-image">
+
+<img src="Students.jpeg"
+alt="Students of St. Mary's Modern High School">
+
+</div>
+
+
+<div class="welcome-text">
+
+<h3>
+
+A Community of Learning and Growth
+
+</h3>
+
+
+<p>
+
+St. Mary's Modern High School is committed to
+providing a supportive and stimulating environment
+where learners are encouraged to discover their
+abilities and reach their full potential.
+
+</p>
+
+
+<p>
+
+The school promotes academic achievement,
+discipline, leadership, practical skills and
+co-curricular development.
+
+</p>
+
+
+<p>
+
+We believe that education should prepare learners
+not only for examinations but also for responsible
+and productive participation in society.
+
+</p>
+
+
+<a href="#academics" class="btn btn-primary">
+
+Explore Academics
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section class="why-us" id="values">
+
+<div class="section-title">
+
+<h2>
+
+Why Choose St. Mary's?
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+An environment designed for learner success
+
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">🎓</div>
+
+<h3>
+
+Academic Excellence
+
+</h3>
+
+<p>
+
+We encourage learners to develop strong
+academic foundations and independent
+thinking skills.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">👨‍🏫</div>
+
+<h3>
+
+Dedicated Teaching
+
+</h3>
+
+<p>
+
+Teachers guide learners through effective
+teaching, assessment and academic support.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">💻</div>
+
+<h3>
+
+ICT & Innovation
+
+</h3>
+
+<p>
+
+Learners are introduced to technology
+and digital skills needed in the modern world.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🏆</div>
+
+<h3>
+
+Holistic Development
+
+</h3>
+
+<p>
+
+Sports, clubs, leadership and practical
+activities develop confident learners.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VISION, MISSION & CORE VALUES
+===================================================== -->
+<section class="vision-mission" id="vision-mission">
+<div class="section-title">
+<h2>Our Vision, Mission & Core Values</h2>
+<div class="gold-line"></div>
+<p>Guiding principles for responsible and successful learners</p>
+</div>
+<div class="cards vision-cards">
+<div class="card">
+<div class="card-icon">🌍</div>
+<h3>Vision</h3>
+<p>Training the youth to become responsible citizen that will fit in the dynamic world.</p>
+</div>
+<div class="card">
+<div class="card-icon">🎯</div>
+<h3>Mission</h3>
+<p>To equip the youth with relevant knowledge, ability, confidence and right attitudes.</p>
+</div>
+<div class="card core-values-card">
+<div class="card-icon">⭐</div>
+<h3>Core Values</h3>
+<ul>
+<li>Fear of God</li>
+<li>Exceptional Discipline</li>
+<li>Excellent Academics</li>
+<li>Talent Development</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- =====================================================
+     STATISTICS
+===================================================== -->
+
+<section class="statistics">
+
+<div class="stat-container">
+
+
+<div class="stat">
+
+<h2 class="counter" data-target="500">
+
+0
+
+</h2>
+
+<p>
+
+Students
+
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2 class="counter" data-target="30">
+
+0
+
+</h2>
+
+<p>
+
+Teachers
+
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2 class="counter" data-target="15">
+
+0
+
+</h2>
+
+<p>
+
+Activities
+
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2 class="counter" data-target="100">
+
+0
+
+</h2>
+
+<p>
+
+Commitment
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ACADEMICS
+===================================================== -->
+
+<section class="academics" id="academics">
+
+<div class="section-title">
+
+<h2>
+
+Academic Excellence
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Preparing learners for the future
+
+</p>
+
+</div>
+
+
+<div class="academic-grid">
+
+
+<div class="academic-box">
+
+<div class="academic-image">
+
+<img src="r.jpeg"
+alt="Computer Laboratory">
+
+</div>
+
+<div class="academic-content">
+
+<h3>
+
+ICT & Computer Studies
+
+</h3>
+
+<p>
+
+Our computer laboratory provides learners
+with opportunities to develop digital literacy,
+computer skills and technological awareness.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="academic-box">
+
+<div class="academic-image">
+
+<img src="Learning.jpeg"
+alt="School learning environment">
+
+</div>
+
+<div class="academic-content">
+
+<h3>
+
+Sciences & Mathematics
+
+</h3>
+
+<p>
+
+Learners are encouraged to develop
+problem-solving, analytical and scientific
+thinking skills.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="academic-box">
+
+<div class="academic-image">
+
+<img src="y.jpeg"
+alt="Students learning">
+
+</div>
+
+<div class="academic-content">
+
+<h3>
+
+Languages & Humanities
+
+</h3>
+
+<p>
+
+Learners develop communication skills,
+creativity, critical thinking and an understanding
+of society.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     STUDENT LIFE
+===================================================== -->
+
+<section class="activities" id="studentlife">
+
+<div class="section-title">
+
+<h2>
+
+Student Life
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Learning continues beyond the classroom
+
+</p>
+
+</div>
+
+
+<div class="activity-grid">
+
+
+<div class="activity">
+
+<img src="z.jpeg"
+alt="School football team">
+
+<div class="activity-text">
+
+⚽ Sports
+
+</div>
+
+</div>
+
+
+<div class="activity">
+
+<img src="Agricultural activity.jpeg"
+alt="Students doing gardening">
+
+<div class="activity-text">
+
+🌱 Agriculture & Environment
+
+</div>
+
+</div>
+
+
+<div class="activity">
+
+<img src="Students.jpeg"
+alt="Students together">
+
+<div class="activity-text">
+
+👥 Clubs & Leadership
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SCHOOL FACILITIES
+===================================================== -->
+
+<section class="facilities" id="facilities">
+
+<div class="section-title">
+
+<h2>
+
+Our Facilities
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Supporting teaching, learning and student development
+
+</p>
+
+</div>
+
+
+<div class="facility-grid">
+
+
+<div class="facility">
+
+<img src="w.jpeg"
+alt="School buildings">
+
+<div class="facility-content">
+
+<h3>
+
+School Environment
+
+</h3>
+
+<p>
+
+Our school environment provides spaces
+for learning, interaction and student activities.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="facility" id="ict">
+
+<img src="Computer learning.jpeg"
+alt="Computer laboratory">
+
+<div class="facility-content">
+
+<h3>
+
+Computer Laboratory
+
+</h3>
+
+<p>
+
+The computer laboratory supports ICT learning
+and development of digital skills.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="facility">
+
+<img src="Agricultural activity.jpeg"
+alt="School garden">
+
+<div class="facility-content">
+
+<h3>
+
+Agricultural Activities
+
+</h3>
+
+<p>
+
+Practical agricultural activities help learners
+develop useful life and environmental skills.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SCHOOL LEADERSHIP
+===================================================== -->
+
+<section id="leadership" class="welcome">
+
+<div class="section-title">
+
+<h2>
+
+School Leadership
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Guiding the school towards excellence
+
+</p>
+
+</div>
+
+
+<div class="welcome-container">
+
+<div class="welcome-image">
+
+<img src="Students.jpeg"
+alt="School administration">
+
+</div>
+
+
+<div class="welcome-text">
+
+<h3>
+
+Strong Leadership for Better Education
+
+</h3>
+
+<p>
+
+The administration works together with teachers,
+parents and learners to maintain a positive
+learning environment.
+
+</p>
+
+<p>
+
+School leadership promotes discipline,
+academic achievement, responsible citizenship
+and the welfare of learners.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWS
+===================================================== -->
+
+<section class="news" id="news">
+
+<div class="section-title">
+
+<h2>
+
+Latest News & Events
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+What's happening at St. Mary's
+
+</p>
+
+</div>
+
+
+<div class="news-grid">
+
+
+<div class="news-card">
+
+<img src="f.jpeg"
+alt="Students">
+
+<div class="news-content">
+
+<span class="date">
+
+SCHOOL NEWS
+
+</span>
+
+<h3>
+
+School Community Activities
+
+</h3>
+
+<p>
+
+Learners continue to participate in
+academic and co-curricular activities.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<img src="e.jpeg"
+alt="Sports">
+
+<div class="news-content">
+
+<span class="date">
+
+SPORTS
+
+</span>
+
+<h3>
+
+Sports Development
+
+</h3>
+
+<p>
+
+Students participate in sports activities
+that promote teamwork and discipline.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<img src="Agricultural activity.jpeg"
+alt="Agriculture">
+
+<div class="news-content">
+
+<span class="date">
+
+PRACTICAL LEARNING
+
+</span>
+
+<h3>
+
+Agriculture & Environment
+
+</h3>
+
+<p>
+
+Learners participate in practical activities
+that promote responsibility and sustainability.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<h2>
+
+School Gallery
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+A glimpse into life at St. Mary's Modern High School
+
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item"
+onclick="openLightbox(this)">
+
+<img src="g.jpeg"
+alt="Students">
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openLightbox(this)">
+
+<img src="e.jpeg"
+alt="Football team">
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openLightbox(this)">
+
+<img src="Agricultural activity.jpeg"
+alt="Students gardening">
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openLightbox(this)">
+
+<img src="r.jpeg"
+alt="Computer laboratory">
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openLightbox(this)">
+
+<img src="School buildings.jpeg"
+alt="School building">
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openLightbox(this)">
+
+<img src="k.jpeg"
+alt="Students group">
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div class="lightbox" id="lightbox">
+
+<span class="close-lightbox"
+onclick="closeLightbox()">
+
+&times;
+
+</span>
+
+<img id="lightboxImage" src=" w.jpeg" alt="School image">
+
+</div>
+
+
+<!-- =====================================================
+     TESTIMONIALS
+===================================================== -->
+
+<section class="testimonials">
+
+<div class="section-title">
+
+<h2>
+
+Our School Community
+
+</h2>
+
+<div class="gold-line"></div>
+
+</div>
+
+
+<div class="testimonial active">
+
+<p>
+
+"Education should develop the whole learner,
+building knowledge, confidence, discipline
+and responsibility."
+
+</p>
+
+<h4>
+
+— St. Mary's School Community
+
+</h4>
+
+</div>
+
+
+<div class="testimonial">
+
+<p>
+
+"Working together, parents, teachers and
+learners can create a strong foundation
+for success."
+
+</p>
+
+<h4>
+
+— Parent
+
+</h4>
+
+</div>
+
+
+<div class="testimonial">
+
+<p>
+
+"School activities help learners discover
+their talents and develop teamwork."
+
+</p>
+
+<h4>
+
+— Student
+
+</h4>
+
+</div>
+
+
+</section>
+
+
+<!-- =====================================================
+     ADMISSIONS
+===================================================== -->
+
+<section class="admission" id="admissions">
+
+<h2>
+
+Admissions Are Open
+
+</h2>
+
+<p>
+
+Are you looking for a supportive environment
+where your child can learn, grow and develop?
+Begin the admission process today.
+
+</p>
+
+
+<a href="#application"
+class="btn btn-primary">
+
+Start Application
+
+</a>
+
+</section>
+
+
+<!-- =====================================================
+     APPLICATION FORM
+===================================================== -->
+
+<section class="application" id="application">
+
+<div class="section-title">
+
+<h2>
+
+Online Application Form
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+Complete the form below to make an admission enquiry
+
+</p>
+
+</div>
+
+
+<div class="application-container">
+
+
+<form onsubmit="submitApplication(event)">
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>
+
+Student's Full Name
+
+</label>
+
+<input type="text"
+placeholder="Enter student's full name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+
+Date of Birth
+
+</label>
+
+<input type="date"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+
+Gender
+
+</label>
+
+<select required>
+
+<option value="">
+
+Select Gender
+
+</option>
+
+<option>
+
+Male
+
+</option>
+
+<option>
+
+Female
+
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+
+Class Applying For
+
+</label>
+
+<select required>
+
+<option value="">
+
+Select Class
+
+</option>
+
+<option>
+
+Senior One
+
+</option>
+
+<option>
+
+Senior Two
+
+</option>
+
+<option>
+
+Senior Three
+
+</option>
+
+<option>
+
+Senior Four
+
+</option>
+
+<option>
+
+Senior Five
+
+</option>
+
+<option>
+
+Senior Six
+
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+
+Parent/Guardian Name
+
+</label>
+
+<input type="text"
+placeholder="Enter parent/guardian name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+
+Telephone Number
+
+</label>
+
+<input type="tel"
+placeholder="+256..."
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+
+Email Address
+
+</label>
+
+<input type="email"
+placeholder="Enter email address">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+
+Previous School
+
+</label>
+
+<input type="text"
+placeholder="Enter previous school">
+
+</div>
+
+
+<div class="form-group full">
+
+<label>
+
+Additional Information
+
+</label>
+
+<textarea
+placeholder="Enter any additional information...">
+
+</textarea>
+
+</div>
+
+
+</div>
+
+
+<button type="submit"
+class="submit-btn">
+
+Submit Application
+
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="faq" id="faq">
+
+<div class="section-title">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+<div class="gold-line"></div>
+
+</div>
+
+
+<div class="faq-container">
+
+
+<div class="faq-item">
+
+<div class="faq-question"
+onclick="toggleFAQ(this)">
+
+How can I apply for admission? +
+
+</div>
+
+<div class="faq-answer">
+
+You can use the online application form
+provided on this website or contact the
+school administration for admission guidance.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question"
+onclick="toggleFAQ(this)">
+
+Which classes are available? +
+
+</div>
+
+<div class="faq-answer">
+
+The school offers secondary education.
+Please contact the administration for
+current admission availability.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question"
+onclick="toggleFAQ(this)">
+
+How can I contact the school? +
+
+</div>
+
+<div class="faq-answer">
+
+You can contact the school through the
+telephone number, email address or contact
+form provided on this website.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question"
+onclick="toggleFAQ(this)">
+
+Does the school offer co-curricular activities? +
+
+</div>
+
+<div class="faq-answer">
+
+Yes. Learners participate in sports,
+clubs, practical activities, leadership
+and other co-curricular programmes.
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+<div class="section-title">
+
+<h2>
+
+Contact Us
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+
+We would be happy to hear from you
+
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h3>
+
+St. Mary's Modern High School
+
+</h3>
+
+
+<p>
+
+📍 <strong>Location:</strong>
+Njeru, Uganda
+
+</p>
+
+
+<p>
+
+📞 <strong>Telephone:</strong>
+0776659756 / 0763350407<br>0772346197
+
+</p>
+
+
+<p>
+
+✉ <strong>Email:</strong>
+stmarysmoderhighschoolnjeru8@gmail.com
+
+</p>
+
+
+<p>
+
+🕐 <strong>Office:</strong>
+Monday – Friday
+
+</p>
+
+
+<p>
+
+For admission enquiries, school information
+and general questions, please contact the
+school administration.
+
+</p>
+
+</div>
+
+
+<div class="contact-form">
+
+<h3>
+
+Send Us a Message
+
+</h3>
+
+<br>
+
+
+<form onsubmit="sendMessage(event)">
+
+
+<input type="text"
+placeholder="Your Name"
+required>
+
+
+<input type="email"
+placeholder="Your Email"
+required>
+
+
+<input type="tel"
+placeholder="Telephone Number">
+
+
+<textarea
+placeholder="Write your message..."
+required></textarea>
+
+
+<button type="submit"
+class="btn btn-primary">
+
+Send Message
+
+</button>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+
+St. Mary's Modern High School
+
+</h3>
+
+<p>
+
+A learning community committed to academic
+excellence, discipline, character development
+and the holistic growth of every learner.
+
+</p>
+
+<br>
+
+<p>
+
+<strong>Njeru, Uganda</strong>
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About Us</a>
+</li>
+
+<li>
+<a href="#academics">Academics</a>
+</li>
+
+<li>
+<a href="#admissions">Admissions</a>
+</li>
+
+<li>
+<a href="#gallery">Gallery</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+
+Student Life
+
+</h3>
+
+<ul>
+
+<li>
+<a href="#studentlife">Sports</a>
+</li>
+
+<li>
+<a href="#studentlife">Clubs</a>
+</li>
+
+<li>
+<a href="#studentlife">Environment</a>
+</li>
+
+<li>
+<a href="#studentlife">Leadership</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+📍 Njeru, Uganda
+
+</p>
+
+<p>
+
+📞 0776659756 / 0763350407<br>0772346197 / 0701133585
+
+</p>
+
+<p>
+
+✉ stmarysmoderhighschoolnjeru8@gmail.com
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+<p>
+
+© 2026 St. Mary's Modern High School, Njeru.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a href="https://wa.me/256776659756"
+class="whatsapp"
+target="_blank">
+
+💬
+
+</a>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navMenu")
+    .classList
+    .toggle("show");
+
+}
+
+
+/* =========================================
+   MOBILE DROPDOWN
+========================================= */
+
+function openDropdown(event, element){
+
+    if(window.innerWidth <= 950){
+
+        event.preventDefault();
+
+        element
+        .parentElement
+        .classList
+        .toggle("open");
+
+    }
+
+}
+
+
+/* =========================================
+   COUNTER ANIMATION
+========================================= */
+
+const counters =
+document.querySelectorAll(".counter");
+
+
+counters.forEach(counter => {
+
+    const target =
+    Number(counter.getAttribute("data-target"));
+
+    let number = 0;
+
+    const speed = 25;
+
+    function updateCounter(){
+
+        if(number < target){
+
+            number += Math.ceil(target / 100);
+
+            if(number > target){
+
+                number = target;
+
+            }
+
+            counter.innerText = number;
+
+            setTimeout(updateCounter, speed);
+
+        }
+
+        else{
+
+            counter.innerText = target + "+";
+
+        }
+
+    }
+
+    updateCounter();
+
+});
+
+
+/* =========================================
+   TESTIMONIAL SLIDER
+========================================= */
+
+const testimonials =
+document.querySelectorAll(".testimonial");
+
+let testimonialIndex = 0;
+
+
+setInterval(function(){
+
+    testimonials[
+        testimonialIndex
+    ].classList.remove("active");
+
+
+    testimonialIndex++;
+
+
+    if(testimonialIndex >= testimonials.length){
+
+        testimonialIndex = 0;
+
+    }
+
+
+    testimonials[
+        testimonialIndex
+    ].classList.add("active");
+
+
+},4000);
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+function toggleFAQ(element){
+
+    const answer =
+    element.nextElementSibling;
+
+    answer.classList.toggle("show");
+
+}
+
+
+/* =========================================
+   GALLERY LIGHTBOX
+========================================= */
+
+function openLightbox(element){
+
+    const image =
+    element.querySelector("img");
+
+    document
+    .getElementById("lightboxImage")
+    .src = image.src;
+
+    document
+    .getElementById("lightbox")
+    .style.display = "flex";
+
+}
+
+
+function closeLightbox(){
+
+    document
+    .getElementById("lightbox")
+    .style.display = "none";
+
+}
+
+
+/* =========================================
+   APPLICATION FORM
+========================================= */
+
+function submitApplication(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for applying to St. Mary's Modern High School. Your application has been received."
+    );
+
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting St. Mary's Modern High School. Your message has been received."
+    );
+
+}
+
+
+/* =========================================
+   CLOSE MOBILE MENU
+========================================= */
+
+document
+.querySelectorAll("#navMenu a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        if(window.innerWidth <= 950){
+
+            document
+            .getElementById("navMenu")
+            .classList
+            .remove("show");
+
+        }
+
+    });
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
