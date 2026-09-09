@@ -454,44 +454,74 @@ section{
 
 
 /* =====================================================
-   A-LEVEL SUBJECTS SECTION STYLES
+   SUBJECTS SECTION STYLES (DROPDOWNS)
 ===================================================== */
 
 .a-level-section {
     background: #f9fbfd;
 }
 
-.subjects-grid {
-    max-width: 1150px;
+.subjects-container {
+    max-width: 850px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
 }
 
-.subject-card {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    border-top: 4px solid #d4af37;
-}
-
-.subject-card h3 {
-    color: #062b52;
-    font-size: 22px;
+.subject-dropdown-item {
     margin-bottom: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.subject-card ul {
+.subject-btn {
+    width: 100%;
+    background: #062b52;
+    color: white;
+    padding: 18px 22px;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.subject-btn:hover {
+    background: #041d38;
+}
+
+.subject-content {
+    display: none;
+    background: white;
+    padding: 20px 30px;
+    border-left: 4px solid #d4af37;
+    border-right: 1px solid #eef3f8;
+    border-bottom: 1px solid #eef3f8;
+}
+
+.subject-content.show {
+    display: block;
+}
+
+.subject-content h4 {
+    color: #062b52;
+    font-size: 16px;
+    margin: 12px 0 8px;
+}
+
+.subject-content ul {
     list-style-type: square;
     padding-left: 20px;
     color: #444;
 }
 
-.subject-card li {
+.subject-content li {
     margin-bottom: 8px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
@@ -1043,8 +1073,7 @@ footer a:hover{
     .academic-grid,
     .activity-grid,
     .facility-grid,
-    .news-grid,
-    .subjects-grid{
+    .news-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -1097,8 +1126,7 @@ footer a:hover{
     .gallery-grid,
     .contact-grid,
     .footer-grid,
-    .form-grid,
-    .subjects-grid{
+    .form-grid{
         grid-template-columns:1fr;
     }
 
@@ -1321,7 +1349,7 @@ Languages & Humanities
 
 <a href="#a-level-subjects">
 
-A-Level Subjects
+O-Level & A-Level Subjects
 
 </a>
 
@@ -1991,26 +2019,92 @@ of society.
 
 
 <!-- =====================================================
-     A-LEVEL SUBJECTS OFFERED
+     SUBJECTS OFFERED (O-LEVEL & A-LEVEL DROPDOWNS)
 ===================================================== -->
 
 <section class="a-level-section" id="a-level-subjects">
 
 <div class="section-title">
 
-<h2>A-Level Subjects Offered</h2>
+<h2>Subjects Offered</h2>
 
 <div class="gold-line"></div>
 
-<p>Comprehensive subject options for advanced level education</p>
+<p>Comprehensive subject options for Ordinary and Advanced Level education</p>
 
 </div>
 
-<div class="subjects-grid">
+<div class="subjects-container">
 
-<div class="subject-card">
+<div class="subject-dropdown-item">
 
-<h3>Sciences</h3>
+<button class="subject-btn" onclick="toggleSubjectDropdown(this)">
+
+<span>📚 O-Level Subjects (UCE)</span>
+
+<span>▼</span>
+
+</button>
+
+<div class="subject-content">
+
+<h4>Sciences & Mathematics</h4>
+
+<ul>
+
+<li>Mathematics</li>
+
+<li>Physics</li>
+
+<li>Chemistry</li>
+
+<li>Biology</li>
+
+<li>Agriculture</li>
+
+<li>Computer Studies / ICT</li>
+
+</ul>
+
+<h4>Arts & Humanities</h4>
+
+<ul>
+
+<li>English Language</li>
+
+<li>Literature in English</li>
+
+<li>History</li>
+
+<li>Geography</li>
+
+<li>Christian Religious Education (CRE)</li>
+
+<li>Islamic Religious Education (IRE)</li>
+
+<li>Luganda</li>
+
+<li>Entrepreneurship Education</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="subject-dropdown-item">
+
+<button class="subject-btn" onclick="toggleSubjectDropdown(this)">
+
+<span>🎓 A-Level Subjects (UACE)</span>
+
+<span>▼</span>
+
+</button>
+
+<div class="subject-content">
+
+<h4>Sciences</h4>
 
 <ul>
 
@@ -2028,11 +2122,7 @@ of society.
 
 </ul>
 
-</div>
-
-<div class="subject-card">
-
-<h3>Arts & Humanities</h3>
+<h4>Arts & Humanities</h4>
 
 <ul>
 
@@ -2055,6 +2145,8 @@ of society.
 <li>General Paper (GP)</li>
 
 </ul>
+
+</div>
 
 </div>
 
@@ -3331,6 +3423,31 @@ function openDropdown(event, element){
         .parentElement
         .classList
         .toggle("open");
+
+    }
+
+}
+
+
+/* =========================================
+   SUBJECT DROPDOWN TOGGLE
+========================================= */
+
+function toggleSubjectDropdown(button){
+
+    const content = button.nextElementSibling;
+
+    const icon = button.querySelector("span:last-child");
+
+    content.classList.toggle("show");
+
+    if (content.classList.contains("show")) {
+
+        icon.innerText = "▲";
+
+    } else {
+
+        icon.innerText = "▼";
 
     }
 
